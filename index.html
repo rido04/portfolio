@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="left">
+        <a href="/">Muhammad Ridho Febrian</a>
+      </div>
+
+      <div class="right">
+        <a href="https://github.com/rido04" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+          <span>Github</span>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHRXKQ3-S2HYAAAAZShZexYq2DH3QnvT6oqCtqhRRM-FMABfdQiJDb8IhpsR8U-_pQS25KiYhPNWfPxq8n21H-MneoaBuGwN7tQIQP1FnBVhz6rYd3wIjDb6mMMOciBv6_TJ4M=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmuhammad-ridho-febrian-41bb7a264%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          <span>Linkedin</span>
+        </a>
+
+        <a href="mailto:ridhofebrian.445@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- SECTION 1: Hero -->
+      <section class="hero-section">
+        <div class="text">
+          <h2>Hi, I'm Ridho 👋</h2>
+          <p>
+            Hi!, My name is <b class="color-blue">Muhammad Ridho Febrian</b>, a junior programmer and a student at Universitas Muhammadiyah Tangerang, majoring in Information Technology. I'm passionate about coding, learning new
+            technologies, and solving problems through programming.
+          </p>
+
+          <div class="links">
+            <a href="#skills">
+              <i class="fa-solid fa-code"></i>
+              <span>Skills</span>
+            </a>
+
+            <a href="#contact">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="headshot">
+          <img src="images/profil.jpg" alt="john doe headshot" />
+        </div>
+      </section>
+
+      <!-- SECTION 2: Skills -->
+      <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="text">Here are some of the technologies that I currently use in my journey as a programmer, and of course there will be more in the future!</div>
+
+        <div class="cells">
+          <div class="cell">
+            <img src="images/html-logo.webp" alt="html logo" />
+            <span>HTML</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/css-logo.webp" alt="css logo" />
+            <span>CSS</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/php.png" alt="php logo" />
+            <span>PHP</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/laravel.png" alt="laravel logo" />
+            <span>Laravel</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/git.png" alt="git logo" />
+            <span>Git</span>
+          </div>
+
+          <div class="cell">
+            <img src="images/github.jfif" alt="github logo" />
+            <span>Github</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Showcase Projects -->
+      <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="text">Here are some projects that i'm currently working on.</div>
+        <br />
+        <div class="projects-container">
+          <br />
+          <!-- Project 1: Current Project -->
+          <div class="project-card">
+            <img src="images/projects/Screenshot 2025-01-26 133543.png" alt="Current Project Thumbnail" />
+            <div class="project-content">
+              <h3>Current Project</h3>
+              <p>My first project was to create a website with a <b>multirole users</b> and <b>CRUD</b>, using <b>native PHP</b> for the needs of admin and CS staff as a project assignment for my internship.</p>
+            </div>
+          </div>
+
+          <!-- Project 2: Coming Soon -->
+          <div class="project-card coming-soon">
+            <img src="images/coming.jpg" alt="Coming Soon Thumbnail" />
+            <div class="project-content">
+              <h3>Coming Soon</h3>
+              <p>Exciting projects are on the way! Creating miracles.......</p>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Contact -->
+      <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+
+        <div class="group">
+          <div class="contact-options">
+            <div class="text">If you interested, feel free to contact me via WhatsApp.</div>
+            <br>
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/89643119513" target="_blank" class="whatsapp-btn">
+              <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Icon" />
+              Chat with Me on WhatsApp
+            </a>
+
+            <!-- QR Code -->
+            <div class="qr-code">
+              <p>Or scan the QR Code below to start chatting:</p>
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/6289643119513" alt="WhatsApp QR Code" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Muhammad Ridho Febrian.</p>
+        <div class="social-links">
+          <a href="https://github.com/rido04" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-ridho-febrian-41bb7a264/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:ridhofebrian.445@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
