@@ -138,6 +138,7 @@ nav .right a span {
 
 .skills-section .cells .cell {
   display: flex;
+  background-color: white;
   justify-content: center;
   align-items: center;
   gap: 10px;
