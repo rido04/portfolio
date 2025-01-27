@@ -138,7 +138,7 @@ nav .right a span {
 
 .skills-section .cells .cell {
   display: flex;
-  background-color: white;
+  background-color: transparent;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -153,6 +153,7 @@ nav .right a span {
 .skills-section .cells .cell img {
   width: 30px;
   height: 30px;
+  background-color: transparent;
   object-fit: contain;
   border-radius: 2px;
 }
