@@ -24,8 +24,13 @@ body {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--text-color);
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
 }
 
 /* NAVBAR */
