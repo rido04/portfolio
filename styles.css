@@ -22,7 +22,43 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
 
+body.dark-mode nav {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode .hero-section,
+body.dark-mode .skills-section,
+body.dark-mode .projects-section,
+body.dark-mode .contact-section {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-mode .cell {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .project-card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
 a {
   color: var(--text-color);
   text-decoration: none;
