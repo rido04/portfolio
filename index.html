@@ -16,13 +16,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link class="rounded-full" rel="icon" type="image/png" href="images/assets/logo.png">
 
     <link rel="stylesheet" href="styles.css" />
 
@@ -153,7 +149,7 @@
 
       <!-- SECTION 3: Showcase Projects -->
       <section id="projects" class="projects-section">
-        <h2>Projects</h2>
+        <h2 class="text-3xl text-center mb-4">Projects</h2>
         <div class="text">Here are some projects that i'm currently working on.</div>
         <br />
         <div class="projects-container">
@@ -226,12 +222,10 @@
             </a>
 
             <!-- QR Code -->
-            <div class="qr-code">
-              <p>Or scan the QR Code below to start chatting:</p>
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/6289643119513" alt="WhatsApp QR Code" />
+            <div class="qr-code flex flex-col items-center justify-center">
+              <p class="mb-4">Or scan the QR Code below to start chatting:</p>
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/6289643119513" alt="WhatsApp QR Code" class="w-40 h-40" />
             </div>
-          </div>
-        </div>
       </section>
     </main>
     <!-- Footer -->
