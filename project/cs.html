@@ -5,9 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Project 1</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+  <style>
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    body.dark-mode .bg-white {
+      background-color: #2d2d2d;
+      color: #ffffff;
+    }
+
+    body.dark-mode .text-gray-900 {
+      color: #ffffff;
+    }
+
+    body.dark-mode .text-gray-600 {
+      color: #d1d1d1;
+    }
+
+    body.dark-mode .text-blue-600 {
+      color: #60a5fa;
+    }
+
+    body.dark-mode .bg-gray-100 {
+      background-color: #1a1a1a;
+    }
+
+    body.dark-mode .bg-gray-200 {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    body.dark-mode .hover\:bg-gray-300:hover {
+      background-color: #444444;
+    }
+
+    body.dark-mode .shadow-md {
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    }
+  </style>
   <body class="bg-gray-100 text-gray-900">
     <div class="max-w-4xl mx-auto p-6">
+      <button id="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+        <!-- Ikon untuk dark mode -->
+        <span>Dark Mode</span>
+      </button>
+
       <h1 class="text-3xl font-bold mt-4">Project 1 - Customer Service Web</h1>
       <p class="text-gray-600 mt-2">
         Here was my first project on industry field, in this project, i'm using <b>CRUD</b>, <b>multirole user system</b>, for <b>Admin</b> and <b>CS Staff</b>, they have different display after choosing one of the 4 options on the landing
@@ -66,5 +120,37 @@
         </ul>
       </div>
     </div>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Cek localStorage untuk tema yang disimpan
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        body.classList.add(savedTheme);
+        updateToggleButton(savedTheme);
+      }
+
+      // Fungsi untuk mengupdate tombol toggle
+      function updateToggleButton(theme) {
+        if (theme === "dark-mode") {
+          themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i> <span>Light Mode</span>';
+        } else {
+          themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i> <span>Dark Mode</span>';
+        }
+      }
+
+      // Event listener untuk tombol toggle
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark-mode");
+          updateToggleButton("dark-mode");
+        } else {
+          localStorage.setItem("theme", "");
+          updateToggleButton("");
+        }
+      });
+    </script>
   </body>
 </html>
