@@ -24,7 +24,15 @@
 
     <title>Portfolio</title>
   </head>
-  <body>
+  <style>
+    /* Animasi transisi tema */
+    .theme-transition {
+      transition: background-color 0.5s ease, color 0.5s ease;
+      
+    }
+  </style>
+</head>
+<body class="bg-gray-100 theme-transition">
     <!-- NAVBAR -->
     <nav class="bg-white shadow-md px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
@@ -105,6 +113,7 @@
       <!-- SECTION 2: Skills -->
       <section id="skills" class="skills-section">
         <h2>Skills</h2>
+        <br>
         <div class="text">Here are some of the technologies that I currently use in my journey as a programmer, and of course there will be more in the future!</div>
 
         <div class="cells">
@@ -153,6 +162,7 @@
       <!-- SECTION 3: Showcase Projects -->
       <section id="projects" class="projects-section">
         <h2 class="text-3xl text-center mb-4">Projects</h2>
+        <br>
         <div class="text">Here are some projects that i'm currently working on.</div>
         <br />
         <div class="projects-container">
@@ -180,7 +190,8 @@
       
       <!-- SECTION 4: Showcase Certificates -->
       <section id="certificate" class="projects-section">
-        <h2>Certificates</h2>
+        <h2 class="text-3xl text-center mb-4">Certificates</h2>
+        <br>
         <div class="text">Also, here are some of my Certificates that relevant through my journey.</div>
         <br />
          <div class="projects-container">
@@ -213,10 +224,9 @@
       <!-- SECTION 5: Contact -->
       <section id="contact" class="contact-section">
         <h2>Contact</h2>
-
         <div class="group">
           <div class="contact-options">
-            <div class="text">If you interested, feel free to contact me via WhatsApp.</div>
+            <p>If you interested, feel free to contact me via WhatsApp.</p>
             <br />
             <!-- WhatsApp Button -->
             <a href="https://wa.me/6289643119513" target="_blank" class="whatsapp-btn">
@@ -225,8 +235,9 @@
             </a>
 
             <!-- QR Code -->
-            <div class="qr-code flex flex-col items-center justify-center">
-              <p class="mb-4">Or scan the QR Code below to start chatting:</p>
+            <div class="contact-options flex flex-col items-center justify-center">
+              <p class="contact-options">Or scan the QR Code below to start chatting:</p>
+              <br>
               <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/6289643119513" alt="WhatsApp QR Code" class="w-40 h-40" />
             </div>
       </section>
