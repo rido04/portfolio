@@ -1,5 +1,5 @@
 :root {
-  --text-color: #1a1c20;
+  --text-color: rgb(34, 35, 36);
   --link-color: #4a76ee;
   --background-color: #eeeff1;
 }
@@ -22,9 +22,22 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212;
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-mode nav,
+body.dark-mode .hero-section,
+body.dark-mode .skills-section,
+body.dark-mode .projects-section,
+body.dark-mode .contact-section,
+body.dark-mode .cell,
+body.dark-mode .project-card,
+body.dark-mode footer {
+  background-color: #1f1f1f;
   color: #ffffff;
 }
 
@@ -33,30 +46,25 @@ body.dark-mode nav {
   color: #ffffff;
 }
 
-body.dark-mode a {
+body.dark-mode nav a {
   color: #ffffff;
 }
 
-body.dark-mode .hero-section,
-body.dark-mode .skills-section,
-body.dark-mode .projects-section,
-body.dark-mode .contact-section {
+body.dark-mode nav .right a:last-child {
+  color: #1f1f1f;
+  background-color: #ffffff;
+}
+
+body.dark-mode .sidebar {
   background-color: #1f1f1f;
   color: #ffffff;
 }
 
-body.dark-mode .cell {
-  background-color: #2d2d2d;
+body.dark-mode .sidebar a {
   color: #ffffff;
 }
 
-body.dark-mode .project-card {
-  background-color: #2d2d2d;
-  color: #ffffff;
-}
-
-body.dark-mode footer {
-  background-color: #1f1f1f;
+body.dark-mode .sidebar .close-btn {
   color: #ffffff;
 }
 
@@ -71,7 +79,6 @@ a:hover {
 }
 
 /* NAVBAR */
-/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
@@ -80,9 +87,9 @@ nav {
   height: 80px;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Agar navbar berada di atas elemen lain */
-  background-color: var(--background-color); /* Warna background agar tetap terlihat */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahan efek bayangan untuk lebih menonjol */
+  z-index: 1000;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav .left a {
@@ -210,137 +217,6 @@ nav .right a span {
 
 /* SECTION 4: Contact */
 .contact-section {
-  padding: 0 50px;
-  margin-bottom: 100px;
-}
-
-.contact-section h2 {
-  font-size: 35px;
-}
-
-.contact-section .group {
-  display: flex;
-  gap: 50px;
-}
-
-.contact-section .group .text {
-  flex: 3;
-  margin-top: 20px;
-}
-
-.contact-section .group form {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-section .group form input,
-.contact-section .group form textarea {
-  font-family: "Poppins", sans-serif;
-  border: 2px solid var(--link-color);
-  background-color: transparent;
-  padding: 10px;
-  margin-bottom: 15px;
-  outline: none;
-  resize: none;
-}
-
-.contact-section .group form button {
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-  background-color: var(--link-color);
-  border: none;
-  height: 50px;
-  cursor: pointer;
-  transition: 0.1s;
-}
-
-.contact-section .group form button:hover {
-  filter: brightness(0.9);
-}
-
-@media (max-width: 850px) {
-  /* SECTION 1: Hero */
-  .hero-section .text h2 {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 740px) {
-  /* SECTION 1: Hero */
-  .hero-section {
-    flex-direction: column-reverse;
-  }
-
-  .hero-section .headshot img {
-    width: 300px;
-  }
-
-  /* SECTION 3: Testimony */
-  .testimony-section {
-    text-align: center;
-  }
-
-  .testimony-section .group {
-    flex-direction: column;
-  }
-
-  /* SECTION 4: Contact */
-  .contact-section .group {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  /* NAVBAR */
-  nav {
-    padding: 0 20px;
-  }
-
-  nav .right a {
-    font-size: 22px;
-  }
-
-  nav .right a:last-child {
-    color: var(--text-color);
-    background-color: transparent;
-    padding: 0;
-  }
-
-  nav .right a span {
-    display: none;
-  }
-
-  /* SECTION 1: Hero */
-  .hero-section {
-    padding: 0 20px;
-  }
-
-  .hero-section .text h2 {
-    font-size: 30px;
-  }
-
-  /* SECTION 2: Skills */
-  .skills-section {
-    padding: 0 20px;
-  }
-
-  .skills-section .cells .cell span {
-    font-size: 16px;
-  }
-
-  /* SECTION 3: Testimony */
-  .testimony-section {
-    padding: 0 20px;
-  }
-
-  /* SECTION 4: Contact */
-  .contact-section {
-    padding: 0 20px;
-  }
-}
-.contact-section {
   padding: 50px 20px;
   background-color: #f9f9f9;
   text-align: center;
@@ -349,7 +225,7 @@ nav .right a span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Atur tinggi section menjadi full viewport */
+  height: 100vh;
 }
 
 .contact-section h2 {
@@ -361,7 +237,7 @@ nav .right a span {
   font-size: 1rem;
   margin-bottom: 30px;
   color: #333;
-  max-width: 600px; /* Batas lebar teks */
+  max-width: 600px;
 }
 
 .contact-options {
@@ -409,6 +285,8 @@ nav .right a span {
   color: #333;
   margin-bottom: 10px;
 }
+
+/* Projects Section */
 .projects-section {
   text-align: center;
   padding: 3rem 1rem;
@@ -485,9 +363,7 @@ nav .right a span {
   font-size: 0.75rem;
   font-weight: bold;
 }
-b {
-  color: blue;
-}
+
 /* Footer Styling */
 footer {
   background-color: black;
@@ -514,15 +390,87 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: #1e90ff; /* Change to blue when hovered */
+  color: #1e90ff;
 }
 
-/* Optional: Add responsive styles for mobile */
+/* Responsive Styles */
+@media (max-width: 850px) {
+  .hero-section .text h2 {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 768px) {
   footer .footer-content {
     padding: 10px;
   }
   footer .social-links {
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 740px) {
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+
+  .hero-section .headshot img {
+    width: 300px;
+  }
+
+  .testimony-section {
+    text-align: center;
+  }
+
+  .testimony-section .group {
+    flex-direction: column;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .right a {
+    font-size: 22px;
+  }
+
+  nav .right a:last-child {
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 0;
+  }
+
+  nav .right a span {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 0 20px;
+  }
+
+  .hero-section .text h2 {
+    font-size: 30px;
+  }
+
+  .skills-section {
+    padding: 0 20px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 16px;
+  }
+
+  .testimony-section {
+    padding: 0 20px;
+  }
+
+  .contact-section {
+    padding: 0 20px;
   }
 }
