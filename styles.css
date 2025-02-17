@@ -68,6 +68,28 @@ body.dark-mode .sidebar .close-btn {
   color: #ffffff;
 }
 
+body.dark-mode #menu button,
+body.dark-mode #menu a {
+  color: #ffffff;
+}
+
+body.dark-mode .links a {
+  color: #ffffff;
+}
+
+body.dark-mode .links span {
+  color: #ffffff;
+}
+
+body.dark-mode .project-card a {
+  color: #ffffff;
+}
+
+body.dark-mode .project-card a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
 a {
   color: var(--text-color);
   text-decoration: none;
