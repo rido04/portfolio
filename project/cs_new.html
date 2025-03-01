@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Project 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link class="rounded-full" rel="icon" type="image/png" href="/images/assets/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    body {
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    /* Animasi fade-in */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    body.dark-mode .bg-white {
+      background-color: #2d2d2d;
+      color: #ffffff;
+    }
+
+    body.dark-mode .text-gray-900 {
+      color: #ffffff;
+    }
+
+    body.dark-mode .text-gray-600 {
+      color: #d1d1d1;
+    }
+
+    body.dark-mode .text-blue-600 {
+      color: #60a5fa;
+    }
+
+    body.dark-mode .bg-gray-100 {
+      background-color: #1a1a1a;
+    }
+
+    body.dark-mode .bg-gray-200 {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    body.dark-mode .hover\:bg-gray-300:hover {
+      background-color: #444444;
+    }
+
+    body.dark-mode .shadow-md {
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+  <body class="bg-gray-100 text-gray-900">
+    <div class="max-w-4xl mx-auto p-6">
+      <button id="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+        <!-- Ikon untuk dark mode -->
+        <span>Dark Mode</span>
+      </button>
+
+      <h1 class="text-3xl font-bold mt-4">Project 3 - CS Web With Filament</h1>
+      <p class="text-gray-600 mt-2">
+        This project is an expansion of my first project (Customer Service Web), using Laravel 11 and Filament-based system. It was built to streamline daily report generation for admins and customer service staff at <b>Town Management Summarecon Serpong.</b>
+      </p>
+      <p class="text-gray-600 mt-2">Built with Laravel 11, Filament 3, and MySQL, this system ensures efficient data management and reporting for the team.</p>
+      <br>
+      <p class="text-gray-600 mt-2">Features:</p>
+      <ul class="text-gray-600 mt-2">
+        <li>🔐 Multi-role authentication (Admin & CS)</li>
+        <li>📝 Easy data input for customer service records</li>
+        <li>🔎 Advanced filtering & search functionality</li>
+        <li>📊 Data recap with dynamic tables</li>
+        <li>📤 Export filtered data to Excel</li>
+      </ul>
+
+      <!-- Screenshot -->
+      <div class="mt-6 mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="relative group">
+          <img src="../images/projects/cs-new/landing.png" alt="Screenshot 1" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Landing Page</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-login.png" alt="Screenshot 1" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Admin Login Page</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/cs-login.png" alt="Screenshot 1" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">CS Login Page</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-dasbor.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Dashboard Admin</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-dasbor2.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Admin Service Page</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-input.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Input Service</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-input pelayanan.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Admin can make, edit or delete staff account</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/cs-dasbor.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Dashboard CS</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/cs-pelayanan2.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">CS Service Page</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-rekap.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Admin Summarize Page</span>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <img src="../images/projects/cs-new/admin-rekap2.png" alt="Screenshot 2" class="rounded-lg shadow-md transform transition duration-300 group-hover:brightness-75" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <span class="text-white text-lg font-semibold">Admin Summarize Page</span>
+          </div>
+        </div>
+      </div>
+      
+      
+      <a href="/index.html" class="mt-5 ext-xl text-blue-600 hover:underline"><b>&larr; Back to Portfolio</b></a>
+      
+      <!-- Detail -->
+      <div class="mt-6 bg-white p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold">Tech Stack:</h2>
+        <ul class="list-disc pl-5 mt-2 text-gray-700">
+          <li><b class="text-indigo-500">Frontend : </b><b class="text-blue-700">Tailwind CSS,</b>
+          <b class="text-amber-600">Filament 3, </b><b class="text-pink-500">Livewire</b></li>
+          <li><b class="text-indigo-500">Backend : </b><b class="text-red-500">Laravel 11</b></li>
+          <li><b class="text-indigo-500">Database : </b><b class="text-yellow-500">MySQL Database</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Cek localStorage untuk tema yang disimpan
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        body.classList.add(savedTheme);
+        updateToggleButton(savedTheme);
+      }
+
+      // Fungsi untuk mengupdate tombol toggle
+      function updateToggleButton(theme) {
+        if (theme === "dark-mode") {
+          themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i> <span>Light Mode</span>';
+        } else {
+          themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i> <span>Dark Mode</span>';
+        }
+      }
+
+      // Event listener untuk tombol toggle
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark-mode");
+          updateToggleButton("dark-mode");
+        } else {
+          localStorage.setItem("theme", "");
+          updateToggleButton("");
+        }
+      });
+    </script>
+  </body>
+</html>
