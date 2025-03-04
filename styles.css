@@ -319,6 +319,7 @@ nav .right a span {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  align-item: start;
 }
 
 .project-card {
@@ -327,6 +328,10 @@ nav .right a span {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 300px;
+  min-height: 380px; /* Pastikan semua kartu punya tinggi minimum yang sama */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Agar kontennya rata */
   overflow: hidden;
   transition: transform 0.3s ease;
 }
